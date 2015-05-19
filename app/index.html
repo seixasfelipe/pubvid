@@ -4,84 +4,103 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" ng-app="travosApp"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-	<link ref="/assets/css/normalize.css" rel="stylesheet">
-	<link ref="/assets/css/bootstrap.min.css" rel="stylesheet" h>
-	<link ref="/assets/css/boilerplate.css" rel="stylesheet">
-	<link ref="/assets/css/main.css" rel="stylesheet">
-    <link href="http://vjs.zencdn.net/4.11/video-js.css" rel="stylesheet">
-    <script src="http://vjs.zencdn.net/4.11/video.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	<link href="/app/assets/css/normalize.css" rel="stylesheet">
+	<link href="/app/assets/css/boilerplate.css" rel="stylesheet">
+	<link href="/app/assets/css/main.css" rel="stylesheet">
+	<link href="/app/assets/css/todo.css" rel="stylesheet">
+  <link href="http://vjs.zencdn.net/4.11/video-js.css" rel="stylesheet">
+  <script src="http://vjs.zencdn.net/4.11/video.js"></script>
 </head>
 
 <body>
-    <section class="video-container">
+		<div class="row">
+		  <section class="video-container col-md-8">
 
-        <video id="video-elem" class="video-js vjs-default-skin" controls preload="auto" width="840" height="630" poster="" data-setup='{}'>
-         	<source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4'>
-			<source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm'>
-			<source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg'>
-            <p class="vjs-no-js">
-                To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-        </video>
-    </section>
-    <aside class="items-container">
-        <ul>
-            <li>
-                <div class="view">
-                    <input class="toggle" type="checkbox">
-                    <label class="text">Exemplo de item</label>
-                    <button class="destroy"></button>
-                </div>
-            </li>
-            <li>
-                <div class="view">
-                    <input class="toggle" type="checkbox">
-                    <label class="text">Exemplo de item</label>
-                    <button class="destroy"></button>
-                </div>
-            </li>
-            <li>
-                <div class="view">
-                    <input class="toggle" type="checkbox">
-                    <label class="text">Exemplo de item</label>
-                    <button class="destroy"></button>
-                </div>
-            </li>
-            <li>
-                <div class="view">
-                    <input class="toggle" type="checkbox">
-                    <label class="text">Exemplo de item</label>
-                    <button class="destroy"></button>
-                </div>
-            </li>
-            <li>
-                <div class="view">
-                    <input class="toggle" type="checkbox">
-                    <label class="text">Exemplo de item</label>
-                    <button class="destroy"></button>
-                </div>
-            </li>
-            <li>
-                <div class="view">
-                    <input class="toggle" type="checkbox">
-                    <label class="text">Exemplo de item</label>
-                    <button class="destroy"></button>
-                </div>
-            </li>
-        </ul>
-    </aside>
+	        <video id="video-elem" class="video-js vjs-default-skin" data-setup='{}'>
+	         	<source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4'>
+					  <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm'>
+		        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg'>
+	            <p class="vjs-no-js">
+	                To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+	            </p>
+	        </video>
+	    </section>
+	    <aside class="items-container col-md-4" id="main">
+	        <ul id="todo-list">
+	            <li>
+	                <div class="view">
+	                    <input class="toggle" type="checkbox">
+	                    <label class="text">Exemplo de item</label>
+	                    <button class="destroy"></button>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="view">
+	                    <input class="toggle" type="checkbox">
+	                    <label class="text">Exemplo de item</label>
+	                    <button class="destroy"></button>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="view">
+	                    <input class="toggle" type="checkbox">
+	                    <label class="text">Exemplo de item</label>
+	                    <button class="destroy"></button>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="view">
+	                    <input class="toggle" type="checkbox">
+	                    <label class="text">Exemplo de item</label>
+	                    <button class="destroy"></button>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="view">
+	                    <input class="toggle" type="checkbox">
+	                    <label class="text">Exemplo de item</label>
+	                    <button class="destroy"></button>
+	                </div>
+	            </li>
+	            <li>
+	                <div class="view">
+	                    <input class="toggle" type="checkbox">
+	                    <label class="text">Exemplo de item</label>
+	                    <button class="destroy"></button>
+	                </div>
+	            </li>
+	        </ul>
+	    </aside>
+		</div>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		var options = {
+			"controls": false,
+			"autoplay": true,
+			"preload": "auto",
+			"poster": "",
+			"loop": true,
+			"width": 640,
+			"height": 480,
+			};
+		var player = videojs('video-elem', options, function() {
+				console.log('Good to go!');
+
+				//this.play(); // if you don't trust autoplay for some reason
+
+				// How about an event listener?
+				this.on('ended', function() {
+						console.log('awww...over so soon?');
+				});
+		});
+	</script>
+
 </body>
-<script type="text/javascript">
-var player = videojs('video-elem', { /* Options */ }, function() {
-    console.log('Good to go!');
-
-    this.play(); // if you don't trust autoplay for some reason
-
-    // How about an event listener?
-    this.on('ended', function() {
-        console.log('awww...over so soon?');
-    });
-});
-</script>
 
 </html>
